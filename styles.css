@@ -26,3 +26,7 @@ body {
   width: calc(600px / 16);
   height: calc(600px / 16);
 }
+
+.on {
+  background-color: aquamarine;
+}
