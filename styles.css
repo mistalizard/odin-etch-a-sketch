@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#grid-container {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-square {
+  border: 1px solid black;
+  /* width: calc(100vw / 16); */
+  /* height: calc(100vh / 16); */
+  width: calc(600px / 16);
+  height: calc(600px / 16);
+}
