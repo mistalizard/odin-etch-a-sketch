@@ -1,7 +1,7 @@
 const grid = document.querySelector('#grid-container')
 const canvasSizeButton = document.querySelector('#canvas-size')
 const clearButton = document.querySelector('#clear-canvas')
-let canvasSize = 4
+let canvasSize = 16
 
 function clearGrid() {
   const elements = document.querySelectorAll('.grid-square')
