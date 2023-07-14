@@ -1,6 +1,7 @@
 const grid = document.querySelector('#grid-container')
 const canvasSizeButton = document.querySelector('#canvas-size')
-let canvasSize = 96
+const clearButton = document.querySelector('#clear-canvas')
+let canvasSize = 4
 
 function clearGrid() {
   const elements = document.querySelectorAll('.grid-square')
@@ -16,6 +17,7 @@ function resizeGrid() {
     if (gridSize < 4 || gridSize > 100) {
       alert('Invalid Size: Size must be between 4-100')
     }
+    canvasSize = gridSize
   }
   console.log(gridSize)
   clearGrid()
@@ -26,7 +28,6 @@ function createGrid(size) {
   for (let i = 1; i <= size; i++) {
     for (let i = 1; i <= size; i++) {
       const square = document.createElement('div')
-      //   square.textContent = i
       square.classList = 'grid-square'
       square.style.width = `${100 / size}%`
       square.style.height = `${100 / size}%`
@@ -40,6 +41,11 @@ function createGrid(size) {
 
 canvasSizeButton.addEventListener('click', () => {
   resizeGrid()
+})
+
+clearButton.addEventListener('click', () => {
+  clearGrid()
+  createGrid(canvasSize)
 })
 
 createGrid(canvasSize)
